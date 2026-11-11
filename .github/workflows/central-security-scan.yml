@@ -1,4 +1,3 @@
-
 name: Central Security Scan
 
 on:
@@ -11,4 +10,5 @@ permissions:
 jobs:
   security:
     uses: carterjohnpo567/central-security-automation/.github/workflows/security-orchestrator.yml@feature/repository-foundation
-
+    secrets:
+      CENTRAL_REPO_READ_TOKEN: ${{ secrets.CENTRAL_REPO_READ_TOKEN }}
